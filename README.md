@@ -5,6 +5,10 @@
 
 HTTP Method filter middleware for expressjs
 
+Whitelist HTTP methods for an app or route.
+
+All other HTTP methods will be rejected.
+
 Usage:
 
 ```
@@ -18,13 +22,13 @@ app.use(httpFilter(['POST']));
 app.use('*', httpFilter(['POST']));
 
 // For specific route
-app.get('/api/path', httpFilter(['POST']), (req, res, next) => {
+app.get('/api/path', httpFilter(['GET']), (req, res, next) => {
 
 });
 
 // With express router
-router.all('/api/path', httpFilter(['POST']));
-router.get('/api/path', httpFilter(['POST']), (req, res, next) => {
+router.all('/api/path', httpFilter(['POST', 'GET']));
+router.get('/api/path', httpFilter(['GET']), (req, res, next) => {
 
 });
 ```
