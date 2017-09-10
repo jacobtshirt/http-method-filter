@@ -18,7 +18,7 @@ describe('Filter Spec', () => {
       assert.ok(nextSpy.calledOnce);
       assert.ok(sendStatusSpy.notCalled);
     });
-    it('should send HTTP status code 406 if method is not allowed', () => {
+    it('should send HTTP status code 405 if method is not allowed', () => {
       const instance = filter(['POST']);
       const req = { method: 'GET'  };
       const res = { sendStatus: sendStatusSpy };
