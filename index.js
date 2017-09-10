@@ -1,9 +1,6 @@
-export default function filter(allowedMethods) {
+export default function filter(whitelist) {
   return (req, res, next) => {
-    if (allowedMethods.includes(req.method)) {
-      next();
-    } else {
-      res.sendStatus(405);
-    }
+    if (whitelist.includes(req.method)) next();
+    else res.sendStatus(405);
   };
 }
