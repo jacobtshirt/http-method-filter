@@ -1,0 +1,25 @@
+{
+  "name": "http-method-filter",
+  "version": "0.0.1",
+  "description": "http method filter middleware for expressjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacobtshirt/http-method-filter.git"
+  },
+  "keywords": [
+    "http",
+    "method",
+    "filter",
+    "express"
+  ],
+  "author": "Jacob Tschirhart",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jacobtshirt/http-method-filter/issues"
+  },
+  "homepage": "https://github.com/jacobtshirt/http-method-filter#readme"
+}
