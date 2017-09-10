@@ -4,7 +4,7 @@
   "description": "http method filter middleware for expressjs",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --compilers js:babel-core/register test"
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,10 @@
   "bugs": {
     "url": "https://github.com/jacobtshirt/http-method-filter/issues"
   },
-  "homepage": "https://github.com/jacobtshirt/http-method-filter#readme"
+  "homepage": "https://github.com/jacobtshirt/http-method-filter#readme",
+  "devDependencies": {
+    "babel-core": "6.26.0",
+    "babel-preset-es2015": "6.24.1",
+    "mocha": "3.5.0"
+  }
 }
