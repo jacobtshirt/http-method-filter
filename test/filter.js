@@ -18,7 +18,7 @@ describe('Filter Spec', () => {
       assert.ok(nextSpy.calledOnce);
       assert.ok(sendStatusSpy.notCalled);
     });
-    it('should send HTTP status code 405 if method is not allowed', () => {
+    it('should send default HTTP status code 405 if method is not allowed', () => {
       const instance = filter(['POST']);
       const req = { method: 'GET'  };
       const res = { sendStatus: sendStatusSpy };
@@ -26,6 +26,16 @@ describe('Filter Spec', () => {
       assert.ok(nextSpy.notCalled);
       assert.ok(sendStatusSpy.calledOnce);
       assert.ok(sendStatusSpy.calledWithExactly(405));
+    });
+
+    it('should send HTTP status code passed to param if defined and if method is not allowed', () => {
+      const instance = filter(['POST'], 400);
+      const req = { method: 'GET'  };
+      const res = { sendStatus: sendStatusSpy };
+      instance(req, res, nextSpy);
+      assert.ok(nextSpy.notCalled);
+      assert.ok(sendStatusSpy.calledOnce);
+      assert.ok(sendStatusSpy.calledWithExactly(400));
     });
   });
 });

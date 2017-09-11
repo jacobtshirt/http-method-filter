@@ -1,6 +1,6 @@
-export default function filter(whitelist) {
+export default function filter(whitelist, statusCode) {
   return (req, res, next) => {
     if (whitelist.includes(req.method)) next();
-    else res.sendStatus(405);
+    else res.sendStatus(statusCode || 405);
   };
 }
