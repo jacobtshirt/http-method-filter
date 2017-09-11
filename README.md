@@ -3,11 +3,17 @@
 
 
 
-HTTP Method filter middleware for expressjs
+HTTP Method filter middleware for Express
 
 Whitelist HTTP methods for an app or route.
 
 All other HTTP methods will be rejected.
+
+httpMethodFilter(whitelist[, statusCode])
+* *whitelist* - array of allowed HTTP methods
+* *statusCode* - `Default: 405` set the HTTP status code of the response
+
+
 
 Usage:
 
@@ -28,7 +34,8 @@ app.get('/api/path', httpFilter(['GET']), (req, res, next) => {
 
 // With express router
 router.all('/api/path', httpFilter(['POST', 'GET']));
-router.get('/api/path', httpFilter(['GET']), (req, res, next) => {
+// With status code
+router.get('/api/path', httpFilter(['GET'], 500), (req, res, next) => {
 
 });
 ```
