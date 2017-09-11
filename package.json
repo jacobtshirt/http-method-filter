@@ -1,6 +1,6 @@
 {
   "name": "http-method-filter",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "http method filter middleware for expressjs",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,7 @@
     "method",
     "filter",
     "express",
-    "middleware"
+    "middleware",
     "rest",
     "whitelist",
     "api",
