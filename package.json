@@ -1,6 +1,6 @@
 {
   "name": "http-method-filter",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "http method filter middleware for expressjs",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,13 @@
     "http",
     "method",
     "filter",
-    "express"
+    "express",
+    "middleware"
+    "rest",
+    "whitelist",
+    "api",
+    "request",
+    "security"
   ],
   "author": "Jacob Tschirhart",
   "license": "ISC",
