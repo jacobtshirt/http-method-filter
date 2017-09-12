@@ -34,8 +34,11 @@ app.get('/api/path', httpFilter(['GET']), (req, res, next) => {
 
 // With express router
 router.all('/api/path', httpFilter(['POST', 'GET']));
+router.route('/')
+  .all(httpFilter(['POST', 'GET']))
+  .get(...)
 // With status code
-router.get('/api/path', httpFilter(['GET'], 500), (req, res, next) => {
-
-});
+router.route('/')
+  .all(httpFilter(['POST', 'GET'], 500))
+  .get(...)
 ```
