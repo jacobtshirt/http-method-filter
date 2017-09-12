@@ -28,7 +28,7 @@ app.use(httpFilter(['POST']));
 app.use('*', httpFilter(['POST']));
 
 // For specific route
-app.get('/api/path', httpFilter(['GET']), (req, res, next) => {
+app.all('/api/path', httpFilter(['GET']), (req, res, next) => {
 
 });
 
