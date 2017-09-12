@@ -1,10 +1,12 @@
 {
   "name": "http-method-filter",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "http method filter middleware for expressjs",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "mocha --compilers js:babel-core/register test"
+    "test": "mocha --compilers js:babel-core/register test",
+    "build": "babel index.js --out-dir dist",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
