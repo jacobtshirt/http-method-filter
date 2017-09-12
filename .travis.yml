@@ -3,4 +3,4 @@ node_js:
   - "8.2.1"
 
 before_script:
-  - npm install -g babel
+  - npm install -g babel-cli
