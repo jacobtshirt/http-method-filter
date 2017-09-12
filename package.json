@@ -4,7 +4,7 @@
   "description": "http method filter middleware for expressjs",
   "main": "dist/index.js",
   "scripts": {
-    "test": "mocha --compilers js:babel-core/register test",
+    "test": "mocha --compilers js:babel-core/register test"
   },
   "repository": {
     "type": "git",
