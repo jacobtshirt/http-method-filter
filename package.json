@@ -5,8 +5,6 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "mocha --compilers js:babel-core/register test",
-    "build": "babel index.js --out-dir dist",
-    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
